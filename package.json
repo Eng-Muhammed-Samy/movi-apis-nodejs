@@ -1,0 +1,25 @@
+{
+  "name": "movi-api",
+  "version": "1.0.0",
+  "description": "this is the first api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Eng-Muhammed-Samy/movi-apis-nodejs.git"
+  },
+  "author": "Mohamed Samy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eng-Muhammed-Samy/movi-apis-nodejs/issues"
+  },
+  "homepage": "https://github.com/Eng-Muhammed-Samy/movi-apis-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.7.2"
+  }
+}
