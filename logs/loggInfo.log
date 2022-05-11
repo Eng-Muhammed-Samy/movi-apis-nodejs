@@ -2,3 +2,21 @@
 {"level":"info","message":"\u001b[0mGET /auth/login \u001b[36m304\u001b[0m 8.819 ms - -\u001b[0m\n"}
 {"level":"info","message":"hello"}
 {"level":"info","message":"::1 - - [10/May/2022:17:50:05 +0000] \"GET /auth/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:18:48:11 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:18:48:17 +0000] \"GET /movies HTTP/1.1\" 404 145 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:18:48:32 +0000] \"GET /movies/1 HTTP/1.1\" 200 14 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:18:48:32 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:3000/movies/1\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:02:11 +0000] \"GET /movies/1 HTTP/1.1\" 200 12520 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:03:29 +0000] \"GET /movies/2 HTTP/1.1\" 200 13779 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:14:06 +0000] \"GET /movie/573a1390f29313caabcd5501 HTTP/1.1\" 200 1409 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:19:58 +0000] \"GET /movie/573 HTTP/1.1\" 400 11 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:20:05 +0000] \"GET /movie/573a1390f29313caabcd5501 HTTP/1.1\" 200 1409 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:24:13 +0000] \"GET /movie/573a1390f29313caabcd5501 HTTP/1.1\" 200 1409 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:37:42 +0000] \"GET /movi HTTP/1.1\" 404 9 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"error","message":"Not Found"}
+{"level":"info","message":"::1 - - [11/May/2022:19:45:08 +0000] \"GET /movi HTTP/1.1\" 200 23 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"error","message":"Bad Request"}
+{"level":"info","message":"::1 - - [11/May/2022:19:47:42 +0000] \"GET /movies/fdsgs HTTP/1.1\" 200 25 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - - [11/May/2022:19:49:05 +0000] \"GET /movies/2 HTTP/1.1\" 200 13779 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"error","message":"Bad Request"}
+{"level":"info","message":"::1 - - [11/May/2022:19:49:11 +0000] \"GET /movie/2 HTTP/1.1\" 200 25 \"-\" \"PostmanRuntime/7.29.0\"\n"}
