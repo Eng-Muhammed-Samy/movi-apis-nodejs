@@ -10,9 +10,9 @@ const {
 const router = Router();
 
 router
-  .get("/login", getLogin)
+  // .get("/login", getLogin)
   .post("/login", postLogin)
-  .get("/signup", getSignUp)
+  // .get("/signup", getSignUp)
   .post("/signup", postSignUp);
 
 module.exports = router;
