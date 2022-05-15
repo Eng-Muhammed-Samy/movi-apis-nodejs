@@ -1,11 +1,19 @@
-const { logger } = require("../../configuration/");
+const createError = require("http-errors");
+const { User } = require("../../models");
+const jwt = require('jsonwebtoken')
+const { readFileSync } = require('fs')
 
 module.exports = {
-  // getLogin: (req, res, next) => {
-  //   logger.info("hello");
-  //   res.send("welcom");
-  // },
   postLogin: (req, res, next) => {
-    console.log("welcom to login post");
+    User.login(req.body).then(result => {
+      if (result instanceof Error) {
+        return next(result)
+      }
+      const secretKey = readFileSync('./private.key')
+      const token = jwt.sign({ _id: result._id, username: result.username }, secretKey, {
+        expiresIn: '24h', // expiration date of token
+      })
+      res.json({ token })
+    }).catch(err => next(createError(500)))
   },
 };

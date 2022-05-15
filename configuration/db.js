@@ -1,6 +1,5 @@
 const { MongoClient } = require("mongodb");
-const _uri =
-  "mongodb+srv://mohamed:medo1995@cluster0.br4w0.mongodb.net/my_movi_api?retryWrites=true&w=majority";
+const _uri = process.env.MONGODB_URI;
 
 const dbConn = (coll, cb) => {
   MongoClient.connect(_uri)

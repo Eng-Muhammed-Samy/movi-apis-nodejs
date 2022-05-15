@@ -1,11 +1,11 @@
+require('dotenv').config()
 const express = require("express");
 const createError = require("http-errors");
 
 const { logger } = require("./configuration");
-const middleware = require("./middlewares");
+const { middleware } = require("./middlewares");
 const routes = require("./routes");
 
-const PORT = 3000;
 const app = express();
 
 // handle error if db fetal connection
@@ -33,4 +33,4 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
+app.listen(process.env.PORT, () => console.log(`Server Running on port ${process.env.PORT}`));

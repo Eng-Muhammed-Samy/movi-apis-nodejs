@@ -1,6 +1,6 @@
 const { dbconn } = require("../configuration");
 const { ObjectId } = require("bson");
-
+const { Move } = require('../models')
 const createError = require("http-errors");
 
 module.exports = {
@@ -43,4 +43,19 @@ module.exports = {
       }
     });
   },
+  postMove: (req, res, next) => {
+    const validaton = Move.validateMove(req.body)
+    if (validaton.error) {
+      const error = new Error(validaton.error.message)
+      error.statusCode = 400
+      return next(error)
+    }
+    const move = new Move(req.body)
+    move.saveMove((err) => {
+      if (err) {
+        return next(createError(500))
+      }
+      res.status(201).json({ message: "Movi created successfully" })
+    })
+  }
 };

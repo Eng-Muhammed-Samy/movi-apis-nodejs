@@ -69,7 +69,7 @@ class User {
 
             dbconn('users', async db => {
                 try {
-                    const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['email'] }] })
+                    const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] }, { projection: { username: 1, password: 1 } })
 
                     if (!user || !compareSync(userData['password'], user.password)) {
                         const error = new Error("please enter valid username or password")
@@ -83,6 +83,5 @@ class User {
     }
 }
 
-User.login({ username: "mohamedsamy", password: "Ms-123456" }).then(user => console.log(user)).catch(err => console.log(err))
 
 module.exports = User
